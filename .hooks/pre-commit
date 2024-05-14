@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# git config --local core.hooksPath .hooks
+# git config --local --unset core.hooksPath
+
+echo "---------------"
+echo "pre-commitの実行"
+date

@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# git config --local core.hooksPath .hooks
+# git config --local --unset core.hooksPath
+
+echo "---------------"
+echo "commit-msgの実行"
+msg=$(cat $1)
+
+if [[ ! ${msg} =~ ^(feat|update|docs|fix|add):" " ]]; then
+  echo "形式違い"
+  exit 1
+fi
